@@ -107,7 +107,7 @@
                         <schema>tgtb</schema>
                     </schemas>
                     <locations>
-                        <location>sql/migrations</location>
+                        <location>db/migrations</location>
                     </locations>
                 </configuration>
                 <executions>
