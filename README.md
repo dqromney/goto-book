@@ -1,3 +1,3 @@
 **The Goto Book Application**
 
-[Flyway example](https://github.com/timander/flyway-example)
+0. [Flyway example](https://github.com/timander/flyway-example)
