@@ -80,6 +80,7 @@
                 <configuration>
                     <downloadSources>true</downloadSources>
                     <downloadJavadocs>true</downloadJavadocs>
+                    <detail>true</detail>
 
                 </configuration>
 
