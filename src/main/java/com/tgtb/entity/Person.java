@@ -16,7 +16,7 @@ public class Person implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name="id")
-    private Long pId;
+    private Long id;
 
     @Column
     private String personName;
@@ -24,12 +24,19 @@ public class Person implements Serializable {
     @Column
     private double personAge;
 
-    public Long getpId() {
-        return pId;
+    public Person() {
     }
 
-    public void setpId(Long pId) {
-        this.pId = pId;
+    public Person(Long id) {
+        this.id = id;
+    }
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
     }
 
     public String getPersonName() {
@@ -51,7 +58,7 @@ public class Person implements Serializable {
     @Override
     public String toString() {
         final StringBuilder sb = new StringBuilder("Person{");
-        sb.append("pId=").append(pId);
+        sb.append("id=").append(id);
         sb.append(", personName='").append(personName).append('\'');
         sb.append(", personAge=").append(personAge);
         sb.append('}');
