@@ -8,15 +8,14 @@ import java.io.Serializable;
  * <p>
  * Created by dqromney on 11/10/16.
  */
-@Entity(name = "person")
+@Entity
 @Table(name = "person")
 public class Person implements Serializable {
 
     private static final long serialVersionUID = -5378396373373165919L;
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name="id")
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 
     @Column
