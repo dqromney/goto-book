@@ -2,9 +2,7 @@ package com.tgtb.daos;
 
 import com.tgtb.entity.Person;
 import org.springframework.data.repository.CrudRepository;
-import org.springframework.data.repository.query.Param;
 import org.springframework.data.rest.core.annotation.RepositoryRestResource;
-import org.springframework.data.rest.core.annotation.RestResource;
 
 /**
  * Person Repository.
@@ -15,11 +13,10 @@ import org.springframework.data.rest.core.annotation.RestResource;
 public interface PersonDao extends CrudRepository<Person, Long> {
 
     /**
-     * Finds the person by the person name
-     *
-     * @param personName {@link String}
-     * @return {@link Person} object
-     */
-    @RestResource(path = "byName")
-    public Person findByPersonName(@Param("name") String personName);
+      * Finds the person by the person name
+      *
+      * @param personName the person's name
+      * @return {@link Person} object
+      */
+     public Person findByPersonName(String personName);
 }
