@@ -9,6 +9,7 @@ import java.io.Serializable;
  * Created by dqromney on 11/10/16.
  */
 @Entity(name = "person")
+@Table(name = "person")
 public class Person implements Serializable {
 
     private static final long serialVersionUID = -5378396373373165919L;

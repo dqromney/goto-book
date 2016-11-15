@@ -2,6 +2,7 @@ package com.tgtb.configuration;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.stereotype.Component;
 
 import javax.servlet.*;
 import javax.servlet.http.HttpServletRequest;
@@ -13,6 +14,7 @@ import java.io.IOException;
  *
  * Created by dqromney on 11/14/16.
  */
+@Component
 public class SimpleCORSFilter implements Filter {
 
     private final Logger log = LoggerFactory.getLogger(SimpleCORSFilter.class);

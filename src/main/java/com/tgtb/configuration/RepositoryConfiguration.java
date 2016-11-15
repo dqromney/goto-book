@@ -1,6 +1,7 @@
 package com.tgtb.configuration;
 
 import com.tgtb.entity.Person;
+import org.springframework.context.annotation.Configuration;
 import org.springframework.data.rest.core.config.RepositoryRestConfiguration;
 import org.springframework.data.rest.webmvc.config.RepositoryRestConfigurerAdapter;
 
@@ -9,6 +10,7 @@ import org.springframework.data.rest.webmvc.config.RepositoryRestConfigurerAdapt
  *
  * Created by dqromney on 11/14/16.
  */
+@Configuration
 public class RepositoryConfiguration extends RepositoryRestConfigurerAdapter {
 
     @Override
