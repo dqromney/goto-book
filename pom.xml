@@ -102,9 +102,43 @@
 
     </dependencies>
 
-    <build>
-        <finalName>GotoBookApi</finalName>
+    <profiles>
+        <profile>
+            <id>appserverConfig-local</id>
+            <activation>
+                <activeByDefault>true</activeByDefault>
+                <property>
+                    <name>env</name>
+                    <value>local</value>
+                </property>
+            </activation>
+            <build>
+                <finalName>GotoBookApi</finalName>
+            </build>
+            <properties>
+                <appserver.home>/Users/dqromney/tools/tomcat/apache-tomcat-8.0.28</appserver.home>
+            </properties>
+        </profile>
 
+        <profile>
+            <id>appserverConfig-dev</id>
+            <activation>
+                <property>
+                    <name>env</name>
+                    <value>dev</value>
+                </property>
+            </activation>
+            <build>
+                <finalName>GotoBookApi-Dev</finalName>
+            </build>
+            <properties>
+                <appserver.home>/Users/dqromney/tools/tomcat/apache-tomcat-8.0.28</appserver.home>
+            </properties>
+        </profile>
+
+    </profiles>
+
+    <build>
         <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
