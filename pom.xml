@@ -19,7 +19,7 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <java.version>1.8</java.version>
-        <flyway.version>4.0.3</flyway.version>
+        <!--<flyway.version>4.0.3</flyway.version>-->
 
         <mysql.driver.version>5.1.13</mysql.driver.version>
 
@@ -181,14 +181,14 @@
                 <artifactId>flyway-maven-plugin</artifactId>
                 <version>4.0.3</version>
                 <configuration>
-                    <driver>${flyway.driver}</driver>
-                    <!--<driver>${database.driver}</driver>-->
-                    <url>${flyway.url}</url>
-                    <!--<url>${database.url}</url>-->
-                    <user>${flyway.user}</user>
-                    <!--<user>${database.username}</user>-->
-                    <password>${flyway.password}</password>
-                    <!--<password>${database.password}</password>-->
+                    <!--<driver>${flyway.driver}</driver>-->
+                    <driver>${database.driver}</driver>
+                    <!--<url>${flyway.url}</url>-->
+                    <url>${database.url}</url>
+                    <!--<user>${flyway.user}</user>-->
+                    <user>${database.username}</user>
+                    <!--<password>${flyway.password}</password>-->
+                    <password>${database.password}</password>
                     <schemas>
                         <schema>tgtb</schema>
                     </schemas>
